@@ -1,0 +1,17 @@
+[package]
+name = "wasmtime-wasi-keyvalue-redb"
+version = "0.1.0"
+edition = "2021"
+description = "redb backend for the wasi:keyvalue Wasmtime host implementation"
+license = "Apache-2.0 WITH LLVM-exception"
+repository = "https://github.com/cargopete/wasming"
+
+[dependencies]
+wasmtime = { version = "44.0", features = ["runtime", "component-model", "std"] }
+redb = "4.1"
+anyhow = "1"
+
+[dev-dependencies]
+wasmtime-wasi = { version = "44.0" }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+tempfile = "3"
